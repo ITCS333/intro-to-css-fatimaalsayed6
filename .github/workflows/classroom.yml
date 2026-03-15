@@ -1,0 +1,170 @@
+name: Autograding Tests
+'on':
+- push
+- repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Exercise 1
+      id: exercise-1
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Exercise 1
+        setup-command: npm install
+        command: npm test -- -t "Exercise 1"
+        timeout: 10
+        max-score: 1
+    - name: Exercise 2
+      id: exercise-2
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Exercise 2
+        setup-command: npm install
+        command: npm test -- -t "Exercise 2"
+        timeout: 10
+        max-score: 1
+    - name: Exercise 3
+      id: exercise-3
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Exercise 3
+        setup-command: npm install
+        command: npm test -- -t "Exercise 3"
+        timeout: 10
+        max-score: 1
+    - name: Exercise 4
+      id: exercise-4
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Exercise 4
+        setup-command: npm install
+        command: npm test -- -t "Exercise 4"
+        timeout: 10
+        max-score: 1
+    - name: Exercise 5
+      id: exercise-5
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Exercise 5
+        setup-command: npm install
+        command: npm test -- -t "Exercise 5"
+        timeout: 10
+        max-score: 1
+    - name: Exercise 6
+      id: exercise-6
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Exercise 6
+        setup-command: npm install
+        command: npm test -- -t "Exercise 6"
+        timeout: 10
+        max-score: 1
+    - name: Exercise 7
+      id: exercise-7
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Exercise 7
+        setup-command: npm install
+        command: npm test -- -t "Exercise 7"
+        timeout: 10
+        max-score: 1
+    - name: Exercise 8
+      id: exercise-8
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Exercise 8
+        setup-command: npm install
+        command: npm test -- -t "Exercise 8"
+        timeout: 10
+        max-score: 1
+    - name: Exercise 9
+      id: exercise-9
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Exercise 9
+        setup-command: npm install
+        command: npm test -- -t "Exercise 9"
+        timeout: 10
+        max-score: 1
+    - name: Exercise 10
+      id: exercise-10
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Exercise 10
+        setup-command: npm install
+        command: npm test -- -t "Exercise 10"
+        timeout: 10
+        max-score: 1
+    - name: Exercise 11
+      id: exercise-11
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Exercise 11
+        setup-command: npm install
+        command: npm test -- -t "Exercise 11"
+        timeout: 10
+        max-score: 1
+    - name: Exercise 12
+      id: exercise-12
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Exercise 12
+        setup-command: npm install
+        command: npm test -- -t "Exercise 12"
+        timeout: 10
+        max-score: 1
+    - name: Exercise 13
+      id: exercise-13
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Exercise 13
+        setup-command: npm install
+        command: npm test -- -t "Exercise 13"
+        timeout: 10
+        max-score: 1
+    - name: Exercise 14
+      id: exercise-14
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Exercise 14
+        setup-command: npm install
+        command: npm test -- -t "Exercise 14"
+        timeout: 10
+        max-score: 1
+    - name: Exercise 15
+      id: exercise-15
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Exercise 15
+        setup-command: npm install
+        command: npm test -- -t "Exercise 15"
+        timeout: 10
+        max-score: 1
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        EXERCISE-1_RESULTS: "${{steps.exercise-1.outputs.result}}"
+        EXERCISE-2_RESULTS: "${{steps.exercise-2.outputs.result}}"
+        EXERCISE-3_RESULTS: "${{steps.exercise-3.outputs.result}}"
+        EXERCISE-4_RESULTS: "${{steps.exercise-4.outputs.result}}"
+        EXERCISE-5_RESULTS: "${{steps.exercise-5.outputs.result}}"
+        EXERCISE-6_RESULTS: "${{steps.exercise-6.outputs.result}}"
+        EXERCISE-7_RESULTS: "${{steps.exercise-7.outputs.result}}"
+        EXERCISE-8_RESULTS: "${{steps.exercise-8.outputs.result}}"
+        EXERCISE-9_RESULTS: "${{steps.exercise-9.outputs.result}}"
+        EXERCISE-10_RESULTS: "${{steps.exercise-10.outputs.result}}"
+        EXERCISE-11_RESULTS: "${{steps.exercise-11.outputs.result}}"
+        EXERCISE-12_RESULTS: "${{steps.exercise-12.outputs.result}}"
+        EXERCISE-13_RESULTS: "${{steps.exercise-13.outputs.result}}"
+        EXERCISE-14_RESULTS: "${{steps.exercise-14.outputs.result}}"
+        EXERCISE-15_RESULTS: "${{steps.exercise-15.outputs.result}}"
+      with:
+        runners: exercise-1,exercise-2,exercise-3,exercise-4,exercise-5,exercise-6,exercise-7,exercise-8,exercise-9,exercise-10,exercise-11,exercise-12,exercise-13,exercise-14,exercise-15

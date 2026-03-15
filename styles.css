@@ -1,0 +1,232 @@
+/* ============================================================
+   CSS EXERCISE: styles.css
+   Your task is to write CSS rules below each comment block.
+   DO NOT modify index.html.
+   ============================================================ */
+
+/* ---------------------------------------------------------------
+   EXERCISE 1 — Global / Reset Styles
+   Target the <body> element and:
+     - Set the font-family to 'Arial', with 'sans-serif' as fallback
+     - Set the background-color to #f5f5f5
+     - Set the text color to #333333
+     - Remove default margin and padding (set both to 0)
+--------------------------------------------------------------- */
+body{
+  font-family:Arial, sans-serif;
+  background-color:#f5f5f5;
+  color:#333333;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------------------------------------------------------------
+   EXERCISE 2 — Header Styling
+   Target the element with the id "main-header" and:
+     - Set the background-color to #2c3e50
+     - Set the text color to #ffffff
+     - Add 20px of padding on all sides
+     - Center-align the text
+--------------------------------------------------------------- */
+#main-header{
+  background-color:#2c3e50;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* ---------------------------------------------------------------
+   EXERCISE 3 — Header Heading
+   Target only the <h1> that is a direct child of #main-header and:
+     - Set the font-size to 2.5rem
+     - Remove the default margin (set to 0)
+--------------------------------------------------------------- */
+#main-header > h1{
+  font-size: 2.5rem;
+  margin:0;
+}
+
+/* ---------------------------------------------------------------
+   EXERCISE 4 — Navigation Links
+   Target all <a> tags that are inside the <nav> element and:
+     - Set the color to #f39c12
+     - Remove the underline (text-decoration)
+     - Add 10px of margin on the left and right sides only
+     - Set the font-size to 1rem
+--------------------------------------------------------------- */
+nav a{
+  color: #f39c12;
+  text-decoration: none;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+/* ---------------------------------------------------------------
+   EXERCISE 5 — Navigation Link Hover State
+   Target the hover state of <a> tags inside <nav> and:
+     - Change the text-decoration to underline
+     - Change the color to #ffffff
+--------------------------------------------------------------- */
+nav a:hover{
+  text-decoration: underline;
+  color:#ffffff;
+}
+
+/* ---------------------------------------------------------------
+   EXERCISE 6 — Main Content Area
+   Target the <main> element and:
+     - Set the maximum width to 800px
+     - Center it horizontally using auto margins
+     - Add 40px of padding on all sides
+--------------------------------------------------------------- */
+main{
+  max-width: 800px;
+  margin: auto;
+  padding: 40px;
+}
+
+/* ---------------------------------------------------------------
+   EXERCISE 7 — Section Headings
+   Target all <h2> elements and:
+     - Set the color to #2c3e50
+     - Add a bottom border: 2px solid #f39c12
+     - Add 8px of padding on the bottom only
+--------------------------------------------------------------- */
+h2{
+  color:#2c3e50;
+  border-bottom: 2px solid #f39c12;
+  padding-bottom: 8px;
+}
+
+/* ---------------------------------------------------------------
+   EXERCISE 8 — Intro Paragraph
+   Target the element with the class "intro" and:
+     - Set the font-size to 1.1rem
+     - Set the line-height to 1.8
+     - Set the font-style to italic
+--------------------------------------------------------------- */
+.intro{
+  font-size: 1.1rem;
+  line-height: 1.8;
+  font-style: italic;
+}
+
+/* ---------------------------------------------------------------
+   EXERCISE 9 — Hobbies List
+   Target the element with the class "hobbies-list" and:
+     - Remove the default list-style (set to none)
+     - Remove default padding (set to 0)
+   Then target each <li> inside ".hobbies-list" and:
+     - Add a background-color of #ffffff
+     - Add 10px padding on all sides
+     - Add a 4px margin on the bottom
+     - Add a left border: 4px solid #2c3e50
+--------------------------------------------------------------- */
+.hobbies-list{
+  list-style: none;
+  padding:0;
+}
+.hobbies-list li{
+  background-color: #ffffff;
+  padding: 10px;
+  margin-bottom: 4px;
+  border-left: 4px solid #2c3e50;
+}
+
+/* ---------------------------------------------------------------
+   EXERCISE 10 — Highlighted List Item
+   Target the element with the class "highlight" and:
+     - Change its background-color to #f39c12
+     - Change its text color to #ffffff
+     - Change its left border color to #e67e22
+--------------------------------------------------------------- */
+.highlight{
+  background-color: #f39c12;
+  color: #ffffff;
+  border-left-color: #e67e22;
+}
+
+/* ---------------------------------------------------------------
+   EXERCISE 11 — Blockquote
+   Target the <blockquote> element and:
+     - Set the background-color to #ffffff
+     - Add 20px padding on all sides
+     - Add a left border: 5px solid #f39c12
+     - Remove default margin on left and right (set left/right margin to 0)
+     - Set the font-size to 1.1rem
+--------------------------------------------------------------- */
+blockquote{
+  background-color: #ffffff;
+  padding: 20px;
+  border-left: 5px solid #f39c12;
+  margin-left: 0;
+  margin-right: 0;
+  font-size: 1.1rem;
+}
+
+/* ---------------------------------------------------------------
+   EXERCISE 12 — Cite Element
+   Target the <cite> element and:
+     - Set the display to block
+     - Set the text alignment to right
+     - Set the font-size to 0.9rem
+     - Set the color to #777777
+     - Add 10px margin on the top only
+--------------------------------------------------------------- */
+cite{
+  display: block;
+  text-align: right;
+  font-size: 0.9rem;
+  color: #777777;
+  margin-top: 10px;
+}
+
+/* ---------------------------------------------------------------
+   EXERCISE 13 — Button Link
+   Target the element with the class "btn" and:
+     - Set the display to inline-block
+     - Set the background-color to #2c3e50
+     - Set the text color to #ffffff
+     - Remove the underline (text-decoration)
+     - Add 12px top/bottom padding and 24px left/right padding
+     - Round the corners with a border-radius of 4px
+     - Set the font-size to 1rem
+--------------------------------------------------------------- */
+.btn{
+  display: inline-block;
+  background-color: #2c3e50;
+  color:#ffffff;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* ---------------------------------------------------------------
+   EXERCISE 14 — Button Link Hover State
+   Target the hover state of ".btn" and:
+     - Change the background-color to #f39c12
+     - Add a smooth transition: all 0.3s ease
+--------------------------------------------------------------- */
+.btn:hover{
+  background-color: #f39c12;
+  transition: all 0.3s ease;
+}
+
+/* ---------------------------------------------------------------
+   EXERCISE 15 — Footer
+   Target the element with the id "main-footer" and:
+     - Set the background-color to #2c3e50
+     - Set the text color to #aaaaaa
+     - Set the text alignment to center
+     - Add 20px of padding on all sides
+     - Add a 20px margin on the top
+--------------------------------------------------------------- */
+#main-footer{
+  background-color: #2c3e50;
+  color: #aaaaaa;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
